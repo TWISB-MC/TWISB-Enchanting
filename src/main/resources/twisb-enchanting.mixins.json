@@ -1,0 +1,12 @@
+{
+  "required": true,
+  "package": "twisb.enchanting.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+    "EnchantmentScreenHandlerMixin",
+    "AnvilScreenHandlerMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+	}
+}

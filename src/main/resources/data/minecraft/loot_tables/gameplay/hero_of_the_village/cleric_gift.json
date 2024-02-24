@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:gift",
+  "pools": [
+    {
+      "rolls": 1,
+      "bonus_rolls": 0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "weight": 3,
+          "name": "minecraft:redstone"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 3,
+          "name": "minecraft:lapis_lazuli"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "twisb-enchanting:divine_catalyst"
+        }
+      ]
+    }
+  ],
+  "random_sequence": "minecraft:gameplay/hero_of_the_village/cleric_gift"
+}

@@ -1,0 +1,44 @@
+{
+	"schemaVersion": 1,
+	"id": "twisb-enchanting",
+	"version": "${version}",
+	"name": "TWISB-enchanting",
+	"description": "Enchanting, The Way It Should Be! This mods adds enchanting catalyst which allow you to select which enchantment you will get. Find this by exploring the world.",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/twisb-enchanting/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"twisb.enchanting.TWISBenchanting"
+		],
+		"client": [
+			"twisb.enchanting.TWISBenchantingClient"
+		],
+		"fabric-datagen": [
+			"twisb.enchanting.TWISBenchantingDataGenerator"
+		]
+	},
+	"mixins": [
+		"twisb-enchanting.mixins.json",
+		{
+			"config": "twisb-enchanting.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.15.3",
+		"minecraft": "~1.20.4",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
