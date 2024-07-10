@@ -7,6 +7,7 @@ import net.minecraft.enchantment.EnchantmentLevelEntry;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.registry.entry.RegistryEntry;
+import net.minecraft.registry.tag.EnchantmentTags;
 import net.minecraft.util.Util;
 import net.minecraft.util.collection.Weighting;
 import net.minecraft.util.math.MathHelper;
@@ -60,9 +61,13 @@ public class BetterEnchantmentHelper {
         Iterator<EnchantmentLevelEntry> iter = in.iterator();
         while(iter.hasNext()) {
             EnchantmentLevelEntry entry = iter.next();
-//            LOGGER.info(entry.enchantment.getKey().get().toString());
-//            LOGGER.info(Catalysts.MAPPINGS.get(catalyst.getItem()).toString());
-            if(!Catalysts.MAPPINGS.get(catalyst.getItem()).contains(entry.enchantment.getKey().get())) {
+            RegistryEntry<Enchantment> ench = entry.enchantment;
+//            LOGGER.info(ench.getKeyOrValue().toString());
+//            LOGGER.info(String.valueOf(EnchantmentTags.PREVENTS_BEE_SPAWNS_WHEN_MINING));
+//            LOGGER.info(String.valueOf(ench.isIn(EnchantmentTags.PREVENTS_BEE_SPAWNS_WHEN_MINING)));
+//            LOGGER.info(String.valueOf(Catalysts.MAPPINGS.get(catalyst.getItem())));
+//            LOGGER.info(String.valueOf(ench.isIn(Catalysts.MAPPINGS.get(catalyst.getItem()))));
+            if(!ench.isIn(Catalysts.MAPPINGS.get(catalyst.getItem()))) {
                 iter.remove();
             }
         }

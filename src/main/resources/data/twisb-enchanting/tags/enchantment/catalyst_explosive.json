@@ -1,0 +1,7 @@
+{
+  "values": [
+    "minecraft:knockback",
+	"minecraft:punch",
+	"minecraft:blast_protection"
+  ]
+}
